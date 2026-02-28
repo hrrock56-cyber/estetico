@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GlowUpGram - Upgrade Your Instagram</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0f0f14;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #111122, #1a1a2e);
+}
+
+header h1 {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #8a2be2, #00ffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #8a2be2, #00ffff);
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #8a2be2;
+}
+
+section {
+    padding: 80px 10%;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #00ffff;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #1a1a2e;
+    padding: 25px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #8a2be2;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #8a2be2;
+}
+
+.card p {
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #111;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <div>
+        <h1>Upgrade Your Instagram Game 🔥</h1>
+        <p>Level up your photos, outfits, poses & stories with aesthetic vibes.</p>
+        <button class="btn">Start Your Glow Up</button>
+    </div>
+</header>
+
+<section>
+    <h2>📸 Photo Ideas</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Golden Hour Shots</h3>
+            <p>Take photos during sunset for warm aesthetic lighting.</p>
+        </div>
+        <div class="card">
+            <h3>Mirror Selfies</h3>
+            <p>Use clean backgrounds & natural poses for stylish mirror photos.</p>
+        </div>
+        <div class="card">
+            <h3>Dark Moody Vibes</h3>
+            <p>Low light shots with shadow contrast for a sigma aesthetic.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>👕 Outfit Aesthetic</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Old Money Style</h3>
+            <p>Neutral tones, clean fits, minimal accessories.</p>
+        </div>
+        <div class="card">
+            <h3>Streetwear</h3>
+            <p>Oversized hoodies, sneakers & confident poses.</p>
+        </div>
+        <div class="card">
+            <h3>Minimal Clean</h3>
+            <p>Simple colors, soft lighting, classy vibe.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>🧍 Pose Guide</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Hand in Pocket</h3>
+            <p>Relaxed look with slight body angle for confidence.</p>
+        </div>
+        <div class="card">
+            <h3>Walking Candid</h3>
+            <p>Natural movement shots look authentic & cool.</p>
+        </div>
+        <div class="card">
+            <h3>Over Shoulder Look</h3>
+            <p>Turn back slightly for stylish profile pictures.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>🎵 Story Song Vibes</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Sad Aesthetic</h3>
+            <p>Emotional songs for late-night vibe stories.</p>
+        </div>
+        <div class="card">
+            <h3>Chill Vibe</h3>
+            <p>Soft music with sunset or cafe posts.</p>
+        </div>
+        <div class="card">
+            <h3>Dark Sigma</h3>
+            <p>Confident tracks for bold aesthetic posts.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 GlowUpGram | Designed for Gen-Z Aesthetic 🔥
+</footer>
+
+</body>
+</html>import { useState, useEffect } from "react";
+import "./App.css";
+
+function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [username, setUsername] = useState("");
+  const [caption, setCaption] = useState("");
+  const [generatedCaption, setGeneratedCaption] = useState("");
+
+  const captions = [
+    "Living my aesthetic era ✨",
+    "Less perfection, more authenticity 🖤",
+    "Golden hour hits different 🌅",
+    "Mood: Unbothered & glowing 🔥",
+    "Soft vibes only 🌙",
+    "Main character energy 🎬",
+  ];
+
+  const generateCaption = () => {
+    const random = captions[Math.floor(Math.random() * captions.length)];
+    setGeneratedCaption(random);
+  };
+
+  return (
+    <div className="app">
+      {!loggedIn ? (
+        <div className="login-container glass">
+          <h1>Estetico</h1>
+          <p>Upgrade Your Instagram Aesthetic</p>
+          <input
+            type="text"
+            placeholder="Enter Username"
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <button onClick={() => setLoggedIn(true)}>Login</button>
+        </div>
+      ) : (
+        <>
+          <header className="hero">
+            <h1>Welcome, {username} 🔥</h1>
+            <p>Level up your Instagram presence</p>
+          </header>
+
+          {/* AI Caption Generator */}
+          <section className="section glass">
+            <h2>AI Caption Generator</h2>
+            <button onClick={generateCaption}>Generate Caption</button>
+            {generatedCaption && (
+              <p className="generated">{generatedCaption}</p>
+            )}
+          </section>
+
+          {/* Instagram Feed Preview */}
+          <section className="section">
+            <h2>Instagram Feed Preview</h2>
+            <div className="feed">
+              {[1, 2, 3, 4, 5, 6].map((item) => (
+                <div key={item} className="post glass hover">
+                  <p>Post {item}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Aesthetic Cards */}
+          <section className="section">
+            <h2>Aesthetic Upgrades</h2>
+            <div className="cards">
+              <div className="card glass hover">
+                <h3>Golden Hour</h3>
+                <p>Best lighting for glowing photos.</p>
+              </div>
+              <div className="card glass hover">
+                <h3>Streetwear Fit</h3>
+                <p>Oversized hoodies + sneakers vibe.</p>
+              </div>
+              <div className="card glass hover">
+                <h3>Profile Glow</h3>
+                <p>Sharp angles & confident pose.</p>
+              </div>
+            </div>
+          </section>
+        </>
+      )}
+    </div>
+  );
+}
+
+export default App;
